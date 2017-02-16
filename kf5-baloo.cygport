@@ -1,0 +1,30 @@
+inherit kf5
+
+NAME="kf5-baloo"
+VERSION=5.27.0
+RELEASE=1
+CATEGORY="Libs"
+SUMMARY="KDE 5 file indexing library"
+DESCRIPTION="Baloo provides file searching and indexing. It does so by
+maintaining an index of the contents of your files."
+
+PATCH_URI="5.27-build-dbus.patch"
+
+PKG_NAMES="libKF5Baloo5 libKF5Baloo-devel"
+libKF5Baloo5_CONTENTS="
+	etc/postinstall/kf5-baloo.sh
+	usr/bin/cygKF5Baloo*-5.dll
+	${QT5_QMLDIR#/}/org/kde/baloo/
+	usr/share/doc/
+	usr/share/locale/
+	usr/share/icons/hicolor/128x128/apps/baloo.png
+"
+libKF5Baloo_devel_REQUIRES="libKF5CoreAddons-devel libQt5Core-devel"
+libKF5Baloo_devel_CONTENTS="
+	usr/include/KF5/Baloo/
+	usr/include/KF5/baloo_version.h
+	usr/lib/cmake/KF5Baloo/
+	usr/lib/libKF5Baloo*.dll.a
+	usr/lib/pkgconfig/Baloo.pc
+	usr/share/dbus-1/interfaces/org.kde.baloo.*
+"
