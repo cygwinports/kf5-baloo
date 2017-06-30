@@ -1,14 +1,12 @@
 inherit kf5
 
 NAME="kf5-baloo"
-VERSION=5.27.0
+VERSION=5.35.0
 RELEASE=1
 CATEGORY="Libs"
 SUMMARY="KDE 5 file indexing library"
 DESCRIPTION="Baloo provides file searching and indexing. It does so by
 maintaining an index of the contents of your files."
-
-PATCH_URI="5.27-build-dbus.patch"
 
 PKG_NAMES="libKF5Baloo5 libKF5Baloo-devel"
 libKF5Baloo5_CONTENTS="
