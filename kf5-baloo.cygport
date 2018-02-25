@@ -1,7 +1,7 @@
 inherit kf5
 
 NAME="kf5-baloo"
-VERSION=5.39.0
+VERSION=5.43.0
 RELEASE=1
 CATEGORY="Libs"
 SUMMARY="KDE 5 file indexing library"
@@ -11,6 +11,7 @@ maintaining an index of the contents of your files."
 PKG_NAMES="libKF5Baloo5 libKF5Baloo-devel"
 libKF5Baloo5_CONTENTS="
 	etc/postinstall/kf5-baloo.sh
+	etc/xdg/baloo.categories
 	usr/bin/cygKF5Baloo*-5.dll
 	${QT5_QMLDIR#/}/org/kde/baloo/
 	usr/share/doc/
